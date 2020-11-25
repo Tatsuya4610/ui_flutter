@@ -1,4 +1,3 @@
-// import 'dart:math' as Math;
 import 'package:flutter/material.dart';
 
 class SquareAnimation extends StatefulWidget {
