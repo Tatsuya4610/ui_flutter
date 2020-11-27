@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screen/circular_progress_screen.dart';
+import 'package:flutter_ui/screen/emergency_screen.dart';
 import 'package:flutter_ui/screen/headers_screen.dart';
 import 'package:flutter_ui/screen/move_screen.dart';
 import 'package:flutter_ui/screen/pinterest_screen.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PinterestScreen(),
+      home: EmergencyScreen(),
     );
   }
 }
