@@ -4,6 +4,7 @@ import 'package:flutter_ui/screen/emergency_screen.dart';
 import 'package:flutter_ui/screen/headers_screen.dart';
 import 'package:flutter_ui/screen/move_screen.dart';
 import 'package:flutter_ui/screen/pinterest_screen.dart';
+import 'package:flutter_ui/screen/slider_screen.dart';
 import 'package:flutter_ui/screen/slideshow_screen.dart';
 import 'screen/animation_screen.dart';
 import 'screen/circular_progress_screen.dart';
@@ -16,6 +17,8 @@ import 'screen/circular_progress_screen.dart';
 //HeadersScreen・・X,Y座標を使ったペイント。曲線のペイント。
 //SlidesShowScreen・・画面の切替。
 //PinterestScreen・・StaggeredGridView使用。画面のバーボタンをスクロールの上下で表示非表示。アニメーション使用。
+//EmergencyScreen・・一般リスト。
+//SliderScreen ・・CustomScrollViewの使用。
 
 
 
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: EmergencyScreen(),
+      home: SliderScreen(),
     );
   }
 }
