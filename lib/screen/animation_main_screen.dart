@@ -7,9 +7,15 @@ import 'package:provider/provider.dart';
 class AnimationMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final themeColor = Provider.of<ThemeChanger>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter UI'),
+        title: Text(
+          'Flutter UI',
+          style: TextStyle(
+              color: (themeColor.darkTheme) ? Colors.black54 : Colors.white),
+        ),
+        backgroundColor: themeColor.currentTheme.accentColor,
       ),
       drawer: MainMenu(),
       body: OptionsList(),
@@ -34,7 +40,11 @@ class MainMenu extends StatelessWidget {
                   backgroundColor: themeData.currentTheme.accentColor,
                   child: Text(
                     'リスト',
-                    style: TextStyle(fontSize: 50,color: (themeData.darkTheme) ? Colors.black54 : Colors.white),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: (themeData.darkTheme)
+                            ? Colors.black54
+                            : Colors.white),
                   ),
                 ),
               ),
@@ -48,9 +58,11 @@ class MainMenu extends StatelessWidget {
                 color: Colors.blue,
               ),
               title: Text('ダークモード'),
-              trailing: Switch.adaptive(value: themeData.darkTheme, onChanged: (value) {
-                themeData.darkTheme = value;
-              }),
+              trailing: Switch.adaptive(
+                  value: themeData.darkTheme,
+                  onChanged: (value) {
+                    themeData.darkTheme = value;
+                  }),
             ),
             SafeArea(
               child: ListTile(
@@ -59,9 +71,11 @@ class MainMenu extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 title: Text('カスタムカラー'),
-                trailing: Switch.adaptive(value: themeData.customTheme, onChanged: (value) {
-                  themeData.customTheme = value;
-                }),
+                trailing: Switch.adaptive(
+                    value: themeData.customTheme,
+                    onChanged: (value) {
+                      themeData.customTheme = value;
+                    }),
               ),
             ),
           ],
