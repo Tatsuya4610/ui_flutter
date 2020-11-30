@@ -94,7 +94,6 @@ class _NotificationModel extends ChangeNotifier {
 
   int get number => _number;
 
-  AnimationController _controller;
 
   void countNumber() {
     _number++;

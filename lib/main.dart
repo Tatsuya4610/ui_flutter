@@ -1,17 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screen/animate_page_screen.dart';
-import 'package:flutter_ui/screen/circular_progress_screen.dart';
-import 'package:flutter_ui/screen/emergency_screen.dart';
-import 'package:flutter_ui/screen/headers_screen.dart';
-import 'package:flutter_ui/screen/move_screen.dart';
-import 'package:flutter_ui/screen/pinterest_screen.dart';
-import 'package:flutter_ui/screen/slider_screen.dart';
-import 'package:flutter_ui/screen/slideshow_screen.dart';
-import 'screen/animation_screen.dart';
-import 'screen/circular_progress_screen.dart';
+import 'package:flutter_ui/model/theme_changer.dart';
+import 'package:flutter_ui/screen/animation_main_screen.dart';
+import 'package:provider/provider.dart';
 
-
-//homeにScreen入れ替えてください。
 //AnimationScreen・・アニメーションの回転移動など。
 //MoveScreen・・アニメーション。CurvedAnimation。
 //CircularProgressScreen・・主にCustomPaintの使用。グラデーションやPaint。
@@ -22,20 +13,21 @@ import 'screen/circular_progress_screen.dart';
 //SliderScreen ・・CustomScrollViewの使用。
 //AnimatePageScreen・・Animate_doパッケージ使用。
 
-
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(
+      ChangeNotifierProvider(
+        create: (_) => ThemeChanger(0),//1はColors.purple
+        child: MyApp(),
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final themeData = Provider.of<ThemeChanger>(context);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: AnimatePageScreen(),
+      theme: themeData.currentTheme,
+      home: AnimationMainScreen(),
     );
   }
 }

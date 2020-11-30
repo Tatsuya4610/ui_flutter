@@ -34,7 +34,7 @@ class PinterestMenuLocation extends StatelessWidget {
                 PinterestButton(
                   icon: Icons.supervised_user_circle,
                   onPressed: () {},
-                )
+                ),
               ],
             ),
           ),
