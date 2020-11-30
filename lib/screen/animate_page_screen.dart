@@ -49,6 +49,8 @@ class AnimatePageScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('Appバーのアイコン2種類、ページ移動あり'),
+            SizedBox(height: 100,),
             ElasticIn(
               //弾むアニメーション
               child: Icon(
