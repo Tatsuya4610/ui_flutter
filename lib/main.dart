@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/screen/animate_page_screen.dart';
 import 'package:flutter_ui/screen/circular_progress_screen.dart';
 import 'package:flutter_ui/screen/emergency_screen.dart';
 import 'package:flutter_ui/screen/headers_screen.dart';
@@ -19,7 +20,7 @@ import 'screen/circular_progress_screen.dart';
 //PinterestScreen・・StaggeredGridView使用。画面のバーボタンをスクロールの上下で表示非表示。アニメーション使用。
 //EmergencyScreen・・一般リスト。
 //SliderScreen ・・CustomScrollViewの使用。
-
+//AnimatePageScreen・・Animate_doパッケージ使用。
 
 
 void main() {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SliderScreen(),
+      home: AnimatePageScreen(),
     );
   }
 }
