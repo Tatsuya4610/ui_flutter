@@ -17,7 +17,7 @@ import 'package:provider/provider.dart';
 
 void main() => runApp(
       ChangeNotifierProvider(
-        create: (_) => LayoutModel(), //1はColors.purple
+        create: (_) => LayoutModel(),
         child: ChangeNotifierProvider(
           create: (_) => ThemeChanger(0), //1はColors.purple
           child: MyApp(),
