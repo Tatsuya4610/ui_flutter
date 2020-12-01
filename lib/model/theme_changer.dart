@@ -15,7 +15,9 @@ class ThemeChanger with ChangeNotifier {
     _darkTheme = value;
     _customTheme = false;
     if (value) {
-      _currentTheme = ThemeData.dark();
+      _currentTheme = ThemeData.dark().copyWith(
+        accentColor: Colors.purple
+      );
     } else {
       _currentTheme = ThemeData.light();
     }

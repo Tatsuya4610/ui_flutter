@@ -10,7 +10,6 @@ class SlideShowScreen extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.pinkAccent,
       body: SlideShow(
-        pointsUp: true,
         slides: [
           SvgPicture.asset('assets/svg/slide-1.svg'),
           SvgPicture.asset('assets/svg/slide-2.svg'),

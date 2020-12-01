@@ -6,6 +6,12 @@ import 'package:flutter_ui/model/item_button.dart';
 class EmergencyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bool isLarge;
+    if (MediaQuery.of(context).size.height > 500) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
     ButtonItem buttonItem = ButtonItem();
     List<ItemButton> items = buttonItem.item;
     List<Widget> itemMap = items
@@ -21,7 +27,7 @@ class EmergencyScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(top: 160),
+            margin: EdgeInsets.only(top: (isLarge) ? 160 : 80),
             child: ListView(
               children: <Widget>[
                 SizedBox(

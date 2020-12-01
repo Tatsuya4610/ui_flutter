@@ -4,6 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class IconHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bool isLarge;
+    if (MediaQuery.of(context).size.height > 500) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
     return Stack(
       children: <Widget>[
         IconHeaderBackground(),
@@ -16,7 +22,7 @@ class IconHeader extends StatelessWidget {
         Column(
           children: <Widget>[
             SizedBox(
-              height: 80,
+              height: (isLarge) ? 80 : 20,
               width: double.infinity,
             ),
             Text(
@@ -36,9 +42,15 @@ class IconHeader extends StatelessWidget {
 class IconHeaderBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bool isLarge;
+    if (MediaQuery.of(context).size.height > 500) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
     return Container(
       width: double.infinity,
-      height: 250,
+      height: (isLarge) ? 250 : 150,
       decoration: BoxDecoration(
           color: Colors.blue,
           borderRadius: BorderRadius.only(

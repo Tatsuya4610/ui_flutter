@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/model/layout_model.dart';
 import 'package:flutter_ui/model/theme_changer.dart';
-import 'package:flutter_ui/screen/animation_main_screen.dart';
+import 'package:flutter_ui/screen/main_ui_screen.dart';
+import 'package:flutter_ui/screen/main_ui_tablet_screen.dart';
 import 'package:provider/provider.dart';
 
 //AnimationScreen・・アニメーションの回転移動など。
@@ -15,8 +17,11 @@ import 'package:provider/provider.dart';
 
 void main() => runApp(
       ChangeNotifierProvider(
-        create: (_) => ThemeChanger(0),//1はColors.purple
-        child: MyApp(),
+        create: (_) => LayoutModel(), //1はColors.purple
+        child: ChangeNotifierProvider(
+          create: (_) => ThemeChanger(0), //1はColors.purple
+          child: MyApp(),
+        ),
       ),
     );
 
@@ -25,9 +30,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeData = Provider.of<ThemeChanger>(context);
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter UI',
       theme: themeData.currentTheme,
-      home: AnimationMainScreen(),
+      home: OrientationBuilder(
+        //画面サイズや向きを取得する。
+        builder: (BuildContext context, Orientation orientation) {
+          final screenSize = MediaQuery.of(context).size;
+          if (screenSize.width > 500) {
+            return MainUITabletScreen();
+          } else {
+            return MainUIScreen();
+          }
+        },
+      ),
     );
   }
 }

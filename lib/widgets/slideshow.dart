@@ -4,19 +4,57 @@ import 'package:provider/provider.dart';
 
 class SlideShow extends StatelessWidget {
   final List<Widget> slides;
-  final bool pointsUp;
-  SlideShow({this.slides,this.pointsUp = false});
+  SlideShow({this.slides});
 
   @override
   Widget build(BuildContext context) {
+    bool isLarge;
+    if (MediaQuery.of(context).size.height > 500) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
     return ChangeNotifierProvider(
       create: (context) => SliderModel(),
       child: SafeArea(
         child: Center(
-          child: Column(
+          child:(isLarge) ? Column(
             children: <Widget>[
-              Expanded(child: _Slides(slides)),
-              _Dots(slides.length),
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(child: _Slides(slides)),
+                    _Dots(slides.length),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(child: _Slides(slides)),
+                    _Dots(slides.length),
+                  ],
+                ),
+              ),
+            ],
+          ) : Row(
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(child: _Slides(slides)),
+                    _Dots(slides.length),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(child: _Slides(slides)),
+                    _Dots(slides.length),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -26,7 +64,6 @@ class SlideShow extends StatelessWidget {
 }
 
 class _Dots extends StatelessWidget {
-
   final int slidesLeg;
   _Dots(this.slidesLeg);
   @override
@@ -35,9 +72,8 @@ class _Dots extends StatelessWidget {
       width: double.infinity,
       height: 70,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(slidesLeg, (index) => _Dot(index))
-      ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(slidesLeg, (index) => _Dot(index))),
     );
   }
 }
@@ -54,7 +90,9 @@ class _Dot extends StatelessWidget {
       height: 12,
       margin: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
-          color: (pageViewIndex >= index - 0.5 && pageViewIndex < index + 0.5) // pageViewController.pageはmicrosで切り替わっている。
+          color: (pageViewIndex >= index - 0.5 &&
+                  pageViewIndex <
+                      index + 0.5) // pageViewController.pageはmicrosで切り替わっている。
               ? Colors.blue
               : Colors.grey,
           shape: BoxShape.circle),
@@ -110,8 +148,7 @@ class _Slide extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       padding: EdgeInsets.all(30),
-      child: slide ,
+      child: slide,
     );
   }
 }
-

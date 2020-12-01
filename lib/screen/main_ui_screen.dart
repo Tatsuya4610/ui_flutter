@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_ui/routes/routes.dart';
 import 'package:provider/provider.dart';
 
-class AnimationMainScreen extends StatelessWidget {
+class MainUIScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeColor = Provider.of<ThemeChanger>(context);
@@ -12,8 +12,6 @@ class AnimationMainScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Flutter UI',
-          style: TextStyle(
-              color: (themeColor.darkTheme) ? Colors.black54 : Colors.white),
         ),
         backgroundColor: themeColor.currentTheme.accentColor,
       ),
