@@ -5,6 +5,7 @@ import 'package:flutter_ui/screen/circular_progress_screen.dart';
 import 'package:flutter_ui/screen/emergency_screen.dart';
 import 'package:flutter_ui/screen/headers_screen.dart';
 import 'package:flutter_ui/screen/move_screen.dart';
+import 'package:flutter_ui/screen/page_animate_screen.dart';
 import 'package:flutter_ui/screen/pinterest_screen.dart';
 import 'package:flutter_ui/screen/slider_screen.dart';
 import 'package:flutter_ui/screen/slideshow_screen.dart';
@@ -28,6 +29,7 @@ final pageRoutes= <_Route>[
   _Route(icon: FontAwesomeIcons.circleNotch, title: 'グラデーション', page: CircularProgressScreen()),
   _Route(icon: FontAwesomeIcons.mobile, title: 'スクロールアニメ', page: PinterestScreen()),
   _Route(icon: FontAwesomeIcons.mobile, title: 'スライダー', page: SliderScreen()),
+  _Route(icon: FontAwesomeIcons.mobile, title: 'ページ移行アニメーション', page: PageAnimateScreen()),
   _Route(icon: FontAwesomeIcons.mobile, title: 'アニメーション1', page: AnimatePageScreen()),
   _Route(icon: FontAwesomeIcons.mobile, title: 'アニメーション2', page: AnimationScreen()),
   _Route(icon: FontAwesomeIcons.peopleCarry, title: 'アニメーション3', page: MoveScreen()),
