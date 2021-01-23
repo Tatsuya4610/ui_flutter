@@ -3,14 +3,14 @@ import 'package:flutter_ui/widgets/title.dart' ;
 
 class MainScroll extends StatelessWidget {
   final items = [
-    ListItem('Orange', Color(0xffF08F66)),
-    ListItem('Family', Color(0xffF2A38A)),
-    ListItem('Subscriptions', Color(0xffF7CDD5)),
-    ListItem('Books', Color(0xffFCEBAF)),
-    ListItem('Orange', Color(0xffF08F66)),
-    ListItem('Family', Color(0xffF2A38A)),
-    ListItem('Subscriptions', Color(0xffF7CDD5)),
-    ListItem('Books', Color(0xffFCEBAF)),
+    ListItem('テキスト1', Color(0xffF08F66)),
+    ListItem('テキスト2', Color(0xffF2A38A)),
+    ListItem('テキスト3', Color(0xffF7CDD5)),
+    ListItem('テキスト4', Color(0xffFCEBAF)),
+    ListItem('テキスト5', Color(0xffF08F66)),
+    ListItem('テキスト6', Color(0xffF2A38A)),
+    ListItem('テキスト7', Color(0xffF7CDD5)),
+    ListItem('テキスト8', Color(0xffFCEBAF)),
   ];
   @override
   Widget build(BuildContext context) {

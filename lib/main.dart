@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeData = Provider.of<ThemeChanger>(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter UI',
       theme: themeData.currentTheme,
       home: OrientationBuilder(
