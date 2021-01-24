@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screen/animate_page_screen.dart';
-import 'package:flutter_ui/screen/animation_screen.dart';
-import 'package:flutter_ui/screen/circular_progress_screen.dart';
-import 'package:flutter_ui/screen/emergency_screen.dart';
-import 'package:flutter_ui/screen/headers_screen.dart';
-import 'package:flutter_ui/screen/move_screen.dart';
-import 'package:flutter_ui/screen/page_animate_screen.dart';
-import 'package:flutter_ui/screen/pinterest_screen.dart';
-import 'package:flutter_ui/screen/slider_screen.dart';
-import 'package:flutter_ui/screen/slideshow_screen.dart';
+import 'package:flutter_ui/screen/animate_page/animate_page_screen.dart';
+import 'package:flutter_ui/screen/animation/animation_screen.dart';
+import 'package:flutter_ui/screen/circular_progress/circular_progress_screen.dart';
+import 'package:flutter_ui/screen/emergency/emergency_screen.dart';
+import 'package:flutter_ui/screen/header/headers_screen.dart';
+import 'package:flutter_ui/screen/move/move_screen.dart';
+import 'package:flutter_ui/screen/page_animate/page_animate_screen.dart';
+import 'package:flutter_ui/screen/pinterest/pinterest_screen.dart';
+import 'package:flutter_ui/screen/slider/slider_screen.dart';
+import 'package:flutter_ui/screen/slideshow/slideshow_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class _Route {

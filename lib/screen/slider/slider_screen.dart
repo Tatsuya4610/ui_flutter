@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/bottom_button.dart';
-import 'package:flutter_ui/widgets/main_scroll.dart';
+import 'package:flutter_ui/screen/slider/components/bottom_button.dart';
+import 'package:flutter_ui/screen/slider/components/main_scroll.dart';
 
 class SliderScreen extends StatelessWidget {
   @override

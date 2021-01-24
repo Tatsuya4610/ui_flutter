@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/title.dart' ;
+import 'package:flutter_ui/screen/slider/components/title.dart' ;
 
 class MainScroll extends StatelessWidget {
   final items = [

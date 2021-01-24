@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/button_fat.dart';
-import 'package:flutter_ui/widgets/icon_header.dart';
+import 'package:flutter_ui/screen/emergency/components/button_fat.dart';
+import 'package:flutter_ui/screen/emergency/components/icon_header.dart';
 import 'package:flutter_ui/model/item_button.dart';
 
 class EmergencyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isLarge;
-    if (MediaQuery.of(context).size.height > 500) {
+    if (MediaQuery.of(context).size.height > 500) { //デバイス大きさ(ipad別)でUI変化。
       isLarge = true;
     } else {
       isLarge = false;

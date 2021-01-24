@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter_ui/widgets/navigation_page.dart';
-import 'package:flutter_ui/widgets/twitter_animate_page.dart';
+import 'package:flutter_ui/screen/animate_page/components/navigation_page.dart';
+import 'package:flutter_ui/screen/animate_page/components/twitter_animate_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AnimatePageScreen extends StatelessWidget {

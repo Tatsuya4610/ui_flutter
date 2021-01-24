@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/headers.dart';
+import 'package:flutter_ui/screen/header/components/headers.dart';
 
 class HeadersScreen extends StatelessWidget {
   @override

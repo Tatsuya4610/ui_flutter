@@ -15,30 +15,30 @@ class ItemButton {
 }
 
 final _items = <ItemButton>[
-  ItemButton(FontAwesomeIcons.carCrash, 'テキスト1', Color(0xff6989F5),
-      Color(0xff906EF5)),
-  ItemButton(FontAwesomeIcons.plus, 'テキスト2', Color(0xff66A9F2),
-      Color(0xff536CF6)),
+  ItemButton(FontAwesomeIcons.carCrash, 'テキスト1', Colors.deepPurpleAccent,
+      Colors.deepPurple),
+  ItemButton(FontAwesomeIcons.plus, 'テキスト2', Colors.lightBlueAccent,
+      Colors.blueAccent),
   ItemButton(FontAwesomeIcons.theaterMasks, 'テキスト3',
-      Color(0xffF2D572), Color(0xffE06AA3)),
+      Colors.orangeAccent, Colors.deepOrange),
   ItemButton(
-      FontAwesomeIcons.biking, 'テキスト4', Color(0xff317183), Color(0xff46997D)),
-  ItemButton(FontAwesomeIcons.carCrash, 'テキスト5', Color(0xff6989F5),
-      Color(0xff906EF5)),
-  ItemButton(FontAwesomeIcons.plus, 'テキスト6', Color(0xff66A9F2),
-      Color(0xff536CF6)),
+      FontAwesomeIcons.biking, 'テキスト4', Colors.lightGreenAccent, Colors.green),
+  ItemButton(FontAwesomeIcons.carCrash, 'テキスト5', Colors.yellow,
+      Colors.yellowAccent),
+  ItemButton(FontAwesomeIcons.plus, 'テキスト6', Colors.deepPurpleAccent,
+      Colors.deepPurple),
   ItemButton(FontAwesomeIcons.theaterMasks, 'テキスト7',
-      Color(0xffF2D572), Color(0xffE06AA3)),
+      Colors.blueAccent, Colors.lightBlueAccent),
   ItemButton(
-      FontAwesomeIcons.biking, 'テキスト8', Color(0xff317183), Color(0xff46997D)),
-  ItemButton(FontAwesomeIcons.carCrash, 'テキスト9', Color(0xff6989F5),
-      Color(0xff906EF5)),
-  ItemButton(FontAwesomeIcons.plus, 'テキスト10', Color(0xff66A9F2),
-      Color(0xff536CF6)),
+      FontAwesomeIcons.biking, 'テキスト8', Colors.deepOrange, Colors.orangeAccent),
+  ItemButton(FontAwesomeIcons.carCrash, 'テキスト9', Colors.lightGreenAccent,
+      Colors.green),
+  ItemButton(FontAwesomeIcons.plus, 'テキスト10', Colors.yellowAccent,
+      Colors.yellow),
   ItemButton(FontAwesomeIcons.theaterMasks, 'テキスト11',
-      Color(0xffF2D572), Color(0xffE06AA3)),
+      Colors.deepPurple, Colors.deepPurpleAccent),
   ItemButton(
-      FontAwesomeIcons.biking, 'テキスト12', Color(0xff317183), Color(0xff46997D)),
+      FontAwesomeIcons.biking, 'テキスト12', Colors.blueAccent, Colors.lightBlueAccent),
 ];
 
 class ButtonItem {

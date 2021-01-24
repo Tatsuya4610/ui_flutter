@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/move.dart';
+import 'package:flutter_ui/screen/move/components/move.dart';
 
 class MoveScreen extends StatelessWidget {
   @override

@@ -30,8 +30,14 @@ class IconHeader extends StatelessWidget {
               style:
                   TextStyle(fontSize: 20, color: Colors.white.withOpacity(0.7)),
             ),
-            SizedBox(height: 20,),
-            FaIcon(FontAwesomeIcons.plus,size: 50,color: Colors.white.withOpacity(0.7),)
+            SizedBox(
+              height: 20,
+            ),
+            FaIcon(
+              FontAwesomeIcons.plus,
+              size: 50,
+              color: Colors.white.withOpacity(0.7),
+            )
           ],
         )
       ],
@@ -52,17 +58,19 @@ class IconHeaderBackground extends StatelessWidget {
       width: double.infinity,
       height: (isLarge) ? 250 : 150,
       decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(80),
-          ),
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                Color(0xff526BF6),
-                Color(0xff67ACF2),
-              ])),
+        color: Colors.blue,
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(80),
+        ),
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[
+            Color(0xff526BF6),
+            Color(0xff67ACF2),
+          ],
+        ),
+      ),
     );
   }
 }

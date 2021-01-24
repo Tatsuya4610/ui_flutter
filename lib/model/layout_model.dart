@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screen/slider_screen.dart';
+import 'package:flutter_ui/screen/slider/slider_screen.dart';
 
 class LayoutModel with ChangeNotifier {
 

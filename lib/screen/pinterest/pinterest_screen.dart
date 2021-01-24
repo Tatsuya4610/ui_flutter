@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/widgets/pinterest_grid.dart';
+import 'package:flutter_ui/screen/pinterest/components/pinterest_grid.dart';
 import 'package:flutter_ui/model/menu_model.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_ui/widgets/pinterest_menu_location.dart';
+import 'package:flutter_ui/screen/pinterest/components/pinterest_menu_location.dart';
 
 class PinterestScreen extends StatelessWidget {
   @override
